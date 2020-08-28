@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Home, Snippets, Extensions, SignIn, SignUp, NoMatch } from "./pages";
 
 // NOTE:  we need to do setup for github pages because its not working properly with react-router
@@ -8,7 +8,7 @@ import { Home, Snippets, Extensions, SignIn, SignUp, NoMatch } from "./pages";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Switch>
         <Route exact path="/">
           <Home />
