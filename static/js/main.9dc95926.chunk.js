@@ -1,0 +1,2 @@
+(this.webpackJsonpfrontend=this.webpackJsonpfrontend||[]).push([[0],[,,,function(e,n,t){e.exports=t(10)},,,,,function(e,n,t){},function(e,n,t){},function(e,n,t){"use strict";t.r(n);var r=t(0),a=t.n(r),o=t(2),c=t.n(o);t(8),t(9);var l=function(){return a.a.createElement("div",{className:"App"},a.a.createElement("h1",null,"SnippetServe"),a.a.createElement("p",null,"A platform to share your code snippets."))};c.a.render(a.a.createElement(a.a.StrictMode,null,a.a.createElement(l,null)),document.getElementById("root"))}],[[3,1,2]]]);
+//# sourceMappingURL=main.9dc95926.chunk.js.map
