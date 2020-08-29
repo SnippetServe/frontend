@@ -1,10 +1,7 @@
 import React from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { Home, Snippets, Extensions, SignIn, SignUp, NoMatch } from "./pages";
-
-// NOTE:  we need to do setup for github pages because its not working properly with react-router
-//  https://github.com/rafgraph/spa-github-pages
+import { Extensions, Home, NoMatch, SignIn, SignUp, Snippets } from "./pages";
 
 function App() {
   return (
