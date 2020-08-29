@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import theme from "./theme";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <CSSReset />
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
   document.getElementById("root")
 );
