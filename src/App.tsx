@@ -1,7 +1,7 @@
-import React from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
-import { Extensions, Home, NoMatch, SignIn, SignUp, Snippets } from "./pages";
+import React from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
+import { Extensions, Home, NoMatch, SignIn, SignUp, Snippets } from './pages';
 
 function App() {
   return (

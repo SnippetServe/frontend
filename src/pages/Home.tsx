@@ -1,16 +1,16 @@
-import { Box, Flex, Heading, Image, Stack, Text } from "@chakra-ui/core";
-import React from "react";
-import heroImg from "../assets/hero.svg";
+import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/core';
+import React from 'react';
+import heroImg from '../assets/hero.svg';
 import {
   AndroidBig,
   AtomBig,
   IntelIJBig,
   PycharmBig,
-  VsCodeBig,
-} from "../assets/images";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
+  VsCodeBig
+} from '../assets/images';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 
 // TODO: refactor
 
@@ -19,10 +19,10 @@ function Home() {
     <Stack h="100%">
       {/* --- MAIN SECTION  --- */}
       <Box h="100vh">
-        <Box bg="gray.700" h={["75vh", "65vh"]}>
+        <Box bg="gray.700" h={['75vh', '65vh']}>
           <Header />
           <Hero />
-          <Box w={["auto", "700px"]} ml="auto" mr="auto" mt={["3em", "auto"]}>
+          <Box w={['auto', '700px']} ml="auto" mr="auto" mt={['3em', 'auto']}>
             <Image size="auto" p={0} src={heroImg} />
           </Box>
         </Box>
@@ -48,11 +48,11 @@ function Home() {
           w="80%"
           justifyContent="space-around"
         >
-          <Image size={["100px", "130px", "150px"]} src={VsCodeBig} />
-          <Image size={["100px", "130px", "150px"]} src={AndroidBig} />
-          <Image size={["100px", "130px", "150px"]} src={AtomBig} />
-          <Image size={["100px", "130px", "150px"]} src={IntelIJBig} />
-          <Image size={["100px", "130px", "150px"]} src={PycharmBig} />
+          <Image size={['100px', '130px', '150px']} src={VsCodeBig} />
+          <Image size={['100px', '130px', '150px']} src={AndroidBig} />
+          <Image size={['100px', '130px', '150px']} src={AtomBig} />
+          <Image size={['100px', '130px', '150px']} src={IntelIJBig} />
+          <Image size={['100px', '130px', '150px']} src={PycharmBig} />
         </Flex>
       </Stack>
       {/* Extension  panel */}
@@ -61,7 +61,7 @@ function Home() {
       <Stack
         alignItems="center"
         justifyContent="center"
-        h={["100%", "70vh"]}
+        h={['100%', '70vh']}
         color="white"
       >
         <Flex
