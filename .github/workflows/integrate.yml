@@ -15,7 +15,9 @@ jobs:
           node-version: 12
       - name: npm install
         run: npm install
+      - name: npm lint
+        run: npm run lint
       - name: npm build
         run: npm run build
         env:
-          CI: ""
+          CI: ''

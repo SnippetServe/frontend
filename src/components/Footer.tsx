@@ -1,5 +1,5 @@
-import { Flex, Text } from "@chakra-ui/core";
-import React from "react";
+import { Flex, Text } from '@chakra-ui/core';
+import React from 'react';
 
 function Footer() {
   return (
