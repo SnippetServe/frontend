@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { Box, SimpleGrid } from '@chakra-ui/core';
 import React from 'react';
 
-function RepeatGrid() {
+function RepeatGrid({ ...props }: any) {
   const boxes = () => {
     const l = [];
     // eslint-disable-next-line no-plusplus
@@ -15,13 +16,13 @@ function RepeatGrid() {
       columns={5}
       spacing="5px"
       position="absolute"
-      top="23%"
-      left="3%"
       zIndex={-1}
       w="200px"
       h="200px"
       alignItems="center"
       justifyItems="center"
+      display={{ xs: 'none', md: 'grid' }} // remove for small screens
+      {...props}
     >
       {boxes()}
     </SimpleGrid>
