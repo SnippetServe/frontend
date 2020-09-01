@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/core';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text
+} from '@chakra-ui/core';
 import React from 'react';
 import heroImg from '../assets/hero.svg';
 import {
@@ -8,9 +16,12 @@ import {
   PycharmBig,
   VsCodeBig
 } from '../assets/images';
+import Card from '../components/Card';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import RepeatedGrid from '../components/RepeatGrid';
+import mockData from './mockData';
 
 // TODO: refactor
 
@@ -30,11 +41,33 @@ function Home() {
       {/* --- MAIN SECTION --- */}
 
       {/* Snippets Showcase Panel */}
-      <Box bg="red.200" h="100vh">
-        <Heading display="inline-block" mt="3em">
-          Will be implemented after data fetching
+      <Stack position="relative" minHeight="100vh" justifyContent="center">
+        <Heading textAlign="center" pb="2em">
+          Latest Code Snippets
         </Heading>
-      </Box>
+        <Flex
+          justifyContent="space-around"
+          alignItems="center"
+          flexWrap="wrap"
+          m="auto"
+          mt="1.5em"
+          w="90%"
+        >
+          {mockData.map((item) => (
+            <Card item={item} key={item.id} />
+          ))}
+        </Flex>
+        <Button
+          variant="solid"
+          variantColor="blue"
+          w="150px"
+          p="1.5em"
+          m="2em auto"
+        >
+          Browse More
+        </Button>
+        <RepeatedGrid />
+      </Stack>
       {/* Snippets Showcase Panel */}
 
       {/* Extensions panel */}
