@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import { Flex, Image, Stack, Text } from '@chakra-ui/core';
 import React from 'react';
-import Like from '../assets/like.svg';
-import Tag from '../assets/tag.svg';
+import LikeSvg from '../assets/like.svg';
+import TagSvg from '../assets/tag.svg';
 
 type CardProp = {
   item: {
@@ -35,8 +35,8 @@ function Card({ item }: CardProp) {
         {item.description}
       </Text>
       <Flex alignItems="center">
-        <Image size={['20px', '25px']} src={Tag} />
-        <Text opacity={0.5} fontSize="xs" ml=".5em" fontWeight="bold">
+        <Image size={['20px', '25px']} src={TagSvg} />
+        <Text fontWeight="bold" fontSize={['xs']} ml=".5em" opacity={0.5}>
           {item.tag}
         </Text>
       </Flex>
@@ -48,7 +48,7 @@ function Card({ item }: CardProp) {
           <Text color="blue.300" fontWeight="bold" mr=".5em">
             {item.score}
           </Text>
-          <Image size={['20px', '25px']} src={Like} />
+          <Image size={['20px', '25px']} src={LikeSvg} />
         </Flex>
       </Flex>
     </Stack>
