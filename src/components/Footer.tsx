@@ -10,7 +10,7 @@ function Footer() {
       justifyContent="center"
       alignItems="center"
     >
-      <Text>2020, DevHyperCoder. All Rights Reserved</Text>
+      <Text>© 2020, DevHyperCoder. All Rights Reserved</Text>
     </Flex>
   );
 }

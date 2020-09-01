@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Stack,
-  Text
-} from '@chakra-ui/core';
+import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/core';
 import React from 'react';
 import heroImg from '../assets/hero.svg';
 import {
@@ -17,15 +9,18 @@ import {
   VsCodeBig
 } from '../assets/images';
 import Card from '../components/Card';
+import CustomLinkButton from '../components/CustomLinkButton';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import RepeatedGrid from '../components/RepeatGrid';
+import StatCard from '../components/StatCard';
 import mockData from './mockData';
 
 // TODO: refactor
 
 function Home() {
+  const extensions = [VsCodeBig, AndroidBig, AtomBig, IntelIJBig, PycharmBig];
   return (
     <Stack h="100%">
       {/* --- MAIN SECTION  --- */}
@@ -57,35 +52,38 @@ function Home() {
             <Card item={item} key={item.id} />
           ))}
         </Flex>
-        <Button
+        <CustomLinkButton
           variant="solid"
           variantColor="blue"
           w="150px"
           p="1.5em"
           m="2em auto"
+          to="/snippets"
         >
           Browse More
-        </Button>
-        <RepeatedGrid />
+        </CustomLinkButton>
+        <RepeatedGrid top="24%" left="3%" />
       </Stack>
       {/* Snippets Showcase Panel */}
 
       {/* Extensions panel */}
       <Stack spacing={10} bg="#F4F4F4">
-        <Text fontSize="4xl" textAlign="center" mt="2em" fontWeight="bold">
+        <Text fontSize="4xl" textAlign="center" mt="1em" fontWeight="bold">
           Extensions
         </Text>
         <Flex
           flexWrap="wrap"
-          m="3em auto"
-          w="80%"
+          m="0 auto 4em auto"
+          w={['80%', '70%', '50%']}
           justifyContent="space-around"
         >
-          <Image size={['100px', '130px', '150px']} src={VsCodeBig} />
-          <Image size={['100px', '130px', '150px']} src={AndroidBig} />
-          <Image size={['100px', '130px', '150px']} src={AtomBig} />
-          <Image size={['100px', '130px', '150px']} src={IntelIJBig} />
-          <Image size={['100px', '130px', '150px']} src={PycharmBig} />
+          {extensions.map((extension) => (
+            <Image
+              src={extension}
+              size={['90px', '110px', '130pxk']}
+              fill="red"
+            />
+          ))}
         </Flex>
       </Stack>
       {/* Extension  panel */}
@@ -96,56 +94,21 @@ function Home() {
         justifyContent="center"
         h={['100%', '70vh']}
         color="white"
+        position="relative"
+        mt="2em"
       >
+        <RepeatedGrid left="10%" top="15%" />
         <Flex
-          w="100%"
+          w="80%"
           h="100%"
+          m="auto"
           justifyContent="space-around"
           alignItems="center"
           flexWrap="wrap"
         >
-          <Stack
-            justifyContent="center"
-            w="350px"
-            h="350px"
-            bg="blue.400"
-            textAlign="center"
-          >
-            <Text fontSize="mega" fontWeight="bold">
-              33
-            </Text>
-            <Text pb="1em" fontWeight="bold" fontSize="2xl">
-              Code Snippets
-            </Text>
-          </Stack>
-          <Stack
-            justifyContent="center"
-            w="350px"
-            h="350px"
-            bg="yellow.300"
-            textAlign="center"
-          >
-            <Text fontSize="mega" fontWeight="bold">
-              10
-            </Text>
-            <Text pb="1em" fontWeight="bold" fontSize="2xl">
-              Extensions
-            </Text>
-          </Stack>
-          <Stack
-            justifyContent="center"
-            w="350px"
-            h="350px"
-            bg="gray.500"
-            textAlign="center"
-          >
-            <Text fontSize="mega" fontWeight="bold">
-              100
-            </Text>
-            <Text pb="1em" fontWeight="bold" fontSize="2xl">
-              Active Contributers
-            </Text>
-          </Stack>
+          <StatCard title="Code snippets" number="86" bg="blue.400" />
+          <StatCard title="Extension" number="1" bg="green.400" />
+          <StatCard title="Active Contributers" number="12" bg="gray.500" />
         </Flex>
       </Stack>
       {/* Stats Panel */}
