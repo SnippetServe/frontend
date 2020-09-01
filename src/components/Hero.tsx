@@ -1,5 +1,6 @@
 import { Button, Heading, Stack, Text } from '@chakra-ui/core';
 import React from 'react';
+import Typist from 'react-typist';
 
 function Hero() {
   return (
@@ -9,7 +10,12 @@ function Hero() {
         fontSize={['32px', '48px', '63px']}
         textAlign="center"
       >
-        Small Pieces To Finish up your code
+        <Typist>
+          Big Pieces
+          <Typist.Delay ms={500} />
+          <Typist.Backspace count={12} />
+          Small Pieces To Finish up your code
+        </Typist>
       </Heading>
       <Text
         fontSize={['sm', 'md', 'lg']}
