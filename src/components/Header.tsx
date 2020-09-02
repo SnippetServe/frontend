@@ -6,13 +6,13 @@ import DropDownMenu from './DropdownMenu';
 
 function Header() {
   return (
-    <Flex alignItems="center" p={['1em 1em', '2em 4em']} color="white">
+    <Flex alignItems="center" p={['1em 1em', '2em 4em']} color="white" w="100%">
       <CustomLink to="/">
         <Text
           fontSize={['md', 'lg', 'main']}
           fontWeight="bold"
           display="inline-block"
-          w="310px"
+          w={['250px', '310px']}
         >
           SnippetServe
         </Text>
@@ -41,8 +41,8 @@ function Header() {
             Sign Up
           </CustomLinkButton>
         </Box>
+        <DropDownMenu display={{ md: 'none' }} />
       </Flex>
-      <DropDownMenu display={{ md: 'none' }} />
     </Flex>
   );
 }
