@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/frontend/static/css/main.bbfd856f.chunk.css",
-    "main.js": "/frontend/static/js/main.23256b40.chunk.js",
-    "main.js.map": "/frontend/static/js/main.23256b40.chunk.js.map",
+    "main.js": "/frontend/static/js/main.ec666ddc.chunk.js",
+    "main.js.map": "/frontend/static/js/main.ec666ddc.chunk.js.map",
     "runtime-main.js": "/frontend/static/js/runtime-main.12e52466.js",
     "runtime-main.js.map": "/frontend/static/js/runtime-main.12e52466.js.map",
-    "static/js/2.61c7898f.chunk.js": "/frontend/static/js/2.61c7898f.chunk.js",
-    "static/js/2.61c7898f.chunk.js.map": "/frontend/static/js/2.61c7898f.chunk.js.map",
+    "static/js/2.12159a98.chunk.js": "/frontend/static/js/2.12159a98.chunk.js",
+    "static/js/2.12159a98.chunk.js.map": "/frontend/static/js/2.12159a98.chunk.js.map",
     "index.html": "/frontend/index.html",
-    "precache-manifest.676ae04329b07c0f17f5ee544e67e5b3.js": "/frontend/precache-manifest.676ae04329b07c0f17f5ee544e67e5b3.js",
+    "precache-manifest.d349655f57aedc285614728d77261244.js": "/frontend/precache-manifest.d349655f57aedc285614728d77261244.js",
     "service-worker.js": "/frontend/service-worker.js",
     "static/css/main.bbfd856f.chunk.css.map": "/frontend/static/css/main.bbfd856f.chunk.css.map",
-    "static/js/2.61c7898f.chunk.js.LICENSE.txt": "/frontend/static/js/2.61c7898f.chunk.js.LICENSE.txt",
+    "static/js/2.12159a98.chunk.js.LICENSE.txt": "/frontend/static/js/2.12159a98.chunk.js.LICENSE.txt",
     "static/media/android_big.png": "/frontend/static/media/android_big.8f2fa0d6.png",
     "static/media/android_small.png": "/frontend/static/media/android_small.a1722844.png",
     "static/media/atom_big.png": "/frontend/static/media/atom_big.c9ac9d5b.png",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.12e52466.js",
-    "static/js/2.61c7898f.chunk.js",
+    "static/js/2.12159a98.chunk.js",
     "static/css/main.bbfd856f.chunk.css",
-    "static/js/main.23256b40.chunk.js"
+    "static/js/main.ec666ddc.chunk.js"
   ]
 }
