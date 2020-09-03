@@ -8,6 +8,7 @@ function Hero() {
       <Heading
         fontFamily="Montserrat, sans-serif"
         fontSize={['32px', '48px', '63px']}
+        h={['100px', 'auto']}
         textAlign="center"
       >
         <Typist>

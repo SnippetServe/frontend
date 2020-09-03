@@ -24,19 +24,30 @@ function Home() {
   return (
     <Stack h="100%">
       {/* --- MAIN SECTION  --- */}
-      <Box h="100vh">
-        <Box bg="gray.700" h={['75vh', '65vh']}>
-          <Header />
-          <Hero />
-          <Box w={['auto', '700px']} ml="auto" mr="auto" mt={['3em', 'auto']}>
-            <Image size="auto" p={0} src={heroImg} />
-          </Box>
+      <Box h="100vh" position="relative">
+        <Box
+          position="absolute"
+          top={0}
+          w="100%"
+          h={['75%', '65%']}
+          backgroundColor="gray.700"
+          zIndex={-1}
+        />
+        <Header />
+        <Hero />
+        <Box w={['auto', '700px']} m={['1em auto', 'auto']}>
+          <Image size="auto" src={heroImg} />
         </Box>
       </Box>
       {/* --- MAIN SECTION --- */}
 
       {/* Snippets Showcase Panel */}
-      <Stack position="relative" minHeight="100vh" justifyContent="center">
+      <Stack
+        position="relative"
+        minHeight="100vh"
+        justifyContent="center"
+        mt="2em"
+      >
         <Heading textAlign="center" pb="2em">
           Latest Code Snippets
         </Heading>
@@ -77,11 +88,13 @@ function Home() {
           w={['80%', '70%', '50%']}
           justifyContent="space-around"
         >
-          {extensions.map((extension) => (
+          {extensions.map((extension, index) => (
             <Image
               src={extension}
               size={['90px', '110px', '130pxk']}
               fill="red"
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
             />
           ))}
         </Flex>
