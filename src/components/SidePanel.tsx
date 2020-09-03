@@ -32,7 +32,6 @@ function SidePanel({ currentPage }: SidePanelProps) {
         </Text>
         <CustomLinkButton
           variant="outline"
-          variantColor="inherit"
           size="lg"
           rounded="lg"
           to={`/${buttonRoute}`}

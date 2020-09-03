@@ -7,7 +7,7 @@ function RepeatGrid({ ...props }: any) {
     const l = [];
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < 20; i++) {
-      l.push(<Box bg="gray.100" rounded="50%" w="20px" h="20px" />);
+      l.push(<Box key={i} bg="gray.100" rounded="50%" w="20px" h="20px" />);
     }
     return l;
   };
@@ -21,7 +21,7 @@ function RepeatGrid({ ...props }: any) {
       h="200px"
       alignItems="center"
       justifyItems="center"
-      display={{ xs: 'none', md: 'grid' }} // remove for small screens
+      display={{ xs: 'none', md: 'none', lg: 'grid' }} // remove for small screens
       {...props}
     >
       {boxes()}
