@@ -1,18 +1,27 @@
 import { Box, Flex, Heading, Link, Stack, Text } from '@chakra-ui/core';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { ImGithub, ImGoogle3 } from 'react-icons/im';
 import SidePanel from '../components/SidePanel';
 import SignInForm from '../components/SignInForm';
 
+const transition: any = { duration: 0.6 };
+
+const MotionBox = motion.custom(Flex);
+
 function SignIn() {
   return (
     <Flex h="100vh">
-      <Flex
+      <MotionBox
         h="100%"
         w={['100%', '85%', '60%']}
         alignItems="center"
         justifyContent="center"
         m="auto"
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={transition}
       >
         <Stack alignItems="center" justifyContent="center" h="70%">
           <Heading
@@ -47,7 +56,7 @@ function SignIn() {
           </Text>
           <SignInForm />
         </Stack>
-      </Flex>
+      </MotionBox>
       <SidePanel currentPage="signin" />
     </Flex>
   );

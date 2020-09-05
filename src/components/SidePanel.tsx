@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { Box, Flex, Text } from '@chakra-ui/core';
+import { Flex, Stack, Text } from '@chakra-ui/core';
+import { motion } from 'framer-motion';
 import React from 'react';
 import CustomLinkButton from './CustomLinkButton';
 
@@ -7,12 +8,17 @@ type SidePanelProps = {
   currentPage: 'signin' | 'signup';
 };
 
+const MotionBox = motion.custom(Flex);
+
+const transition: any = { duration: 0.6 };
+
 function SidePanel({ currentPage }: SidePanelProps) {
   const title = currentPage === 'signup' ? 'Hello' : 'Welcome';
   const buttonText = currentPage === 'signup' ? 'Sign In' : 'Sign Up';
   const buttonRoute = currentPage === 'signup' ? 'signin' : 'signup';
+
   return (
-    <Flex
+    <MotionBox
       justifyContent="center"
       alignItems="center"
       backgroundColor="gray.700"
@@ -20,9 +26,12 @@ function SidePanel({ currentPage }: SidePanelProps) {
       textAlign="center"
       zIndex={10}
       h="100%"
+      w="40%"
       display={['none', 'none', 'none', 'flex']}
+      exit={{ x: currentPage === 'signin' ? '-150%' : '150%' }}
+      transition={transition}
     >
-      <Box>
+      <Stack>
         <Text fontSize="4xl" fontWeight="bold">
           {title}, Developer
         </Text>
@@ -32,14 +41,17 @@ function SidePanel({ currentPage }: SidePanelProps) {
         </Text>
         <CustomLinkButton
           variant="outline"
+          w="200px"
+          m="2em auto"
           size="lg"
           rounded="lg"
+          _hover={{ backgroundColor: 'inherit' }}
           to={`/${buttonRoute}`}
         >
           {buttonText}
         </CustomLinkButton>
-      </Box>
-    </Flex>
+      </Stack>
+    </MotionBox>
   );
 }
 
