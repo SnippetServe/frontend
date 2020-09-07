@@ -4,6 +4,7 @@ import {
   Button,
   FormControl,
   FormErrorMessage,
+  FormLabel,
   Icon,
   Stack
 } from '@chakra-ui/core';
@@ -37,12 +38,14 @@ function SignInForm() {
     >
       {(formikBag) => (
         <form onSubmit={formikBag.handleSubmit}>
-          <Stack m="auto" mt="2em" w={['90%', '70%', '500px']}>
+          <Stack m="auto" mt="2em" w={['90%', '100%', '500px']}>
             <Field name="email">
               {({ form, field }: any) => (
                 <FormControl
                   isInvalid={form.errors.email && form.touched.email}
+                  mb="1.3em"
                 >
+                  <FormLabel>Email</FormLabel>
                   <CustomInput
                     {...field}
                     id="email"
@@ -54,9 +57,8 @@ function SignInForm() {
                         mt="1.7em"
                       />
                     }
-                    placeholder="Email"
                   />
-                  <FormErrorMessage w="95%" m="auto">
+                  <FormErrorMessage m="auto">
                     {form.errors.email}
                   </FormErrorMessage>
                 </FormControl>
@@ -66,9 +68,9 @@ function SignInForm() {
               {({ form, field }: any) => (
                 <FormControl
                   isInvalid={form.errors.password && form.touched.password}
-                  h="80px"
-                  mt=".5em"
+                  mb="1.3em"
                 >
+                  <FormLabel>Password</FormLabel>
                   <CustomInput
                     {...field}
                     id="password"
@@ -80,16 +82,15 @@ function SignInForm() {
                         mt="1.7em"
                       />
                     }
-                    placeholder="Password"
                   />
-                  <FormErrorMessage w="95%" m="auto">
+                  <FormErrorMessage m="auto">
                     {form.errors.password}
                   </FormErrorMessage>
                 </FormControl>
               )}
             </Field>
             <Button
-              m="1em auto"
+              m=".5em auto"
               variantColor="blue"
               size="lg"
               w="160px"
@@ -101,7 +102,7 @@ function SignInForm() {
             <Button
               variant="ghost"
               variantColor="blue"
-              color="black"
+              color="gray.600"
               size="sm"
               m="2em auto"
             >

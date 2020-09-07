@@ -19,12 +19,13 @@ function Card({ item }: CardProp) {
   return (
     <Stack
       bg="white"
-      w={['80%', '60%', '450px']}
+      w={['80%', '400px', '450px']}
       h={['250px', '300px', '350px']}
-      p="2em"
+      p={['1em', '2em']}
       fontSize="lg"
       mb="1.5em"
-      borderTop="8px solid teal"
+      borderTop="12px solid"
+      borderTopColor="blue.500"
       borderRadius="3px"
       boxShadow="0 4px 6px 0 hsla(0, 0%, 0%, 0.2)"
     >
@@ -35,7 +36,7 @@ function Card({ item }: CardProp) {
         {item.description}
       </Text>
       <Flex alignItems="center">
-        <Image size={['20px', '25px']} src={TagSvg} />
+        <Image size="10px" src={TagSvg} />
         <Text fontWeight="bold" fontSize={['xs']} ml=".5em" opacity={0.5}>
           {item.tag}
         </Text>

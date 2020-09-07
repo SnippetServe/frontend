@@ -30,22 +30,25 @@ function SidePanel({ currentPage }: SidePanelProps) {
       display={['none', 'none', 'none', 'flex']}
       exit={{ x: currentPage === 'signin' ? '-150%' : '150%' }}
       transition={transition}
+      className="bg-pattern"
     >
       <Stack>
         <Text fontSize="4xl" fontWeight="bold">
           {title}, Developer
         </Text>
-        <Text w="60%" m="2em auto 4em auto" fontSize="lg">
+        <Text w="60%" m="2em auto 4em auto" fontSize="lg" fontWeight="semibold">
           Get snippets that will definetly ease your coding life, and also
           contribute to help others
         </Text>
         <CustomLinkButton
-          variant="outline"
+          variant="ghost"
           w="200px"
           m="2em auto"
           size="lg"
           rounded="lg"
-          _hover={{ backgroundColor: 'inherit' }}
+          backgroundColor="gray.600"
+          _active={{ backgroundColor: 'inherit' }}
+          _hover={{ backgroundColor: 'gray.600' }}
           to={`/${buttonRoute}`}
         >
           {buttonText}
