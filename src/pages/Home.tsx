@@ -85,7 +85,7 @@ function Home() {
         <Flex
           flexWrap="wrap"
           m="0 auto 4em auto"
-          w={['80%', '70%', '50%']}
+          w="80%"
           justifyContent="space-around"
         >
           {extensions.map((extension, index) => (

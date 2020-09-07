@@ -5,7 +5,7 @@ function Footer() {
   return (
     <Flex
       h={['60px', '100px']}
-      bg="#1D1A1A"
+      bg="gray.700"
       color="white"
       justifyContent="center"
       alignItems="center"

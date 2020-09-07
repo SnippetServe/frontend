@@ -10,7 +10,7 @@ type CustomInputProps = {
 };
 function CustomInput({ id, icon, placeholder, ...props }: CustomInputProps) {
   return (
-    <InputGroup h="70px" mb=".5em" w="95%" m="auto" {...props}>
+    <InputGroup h="70px" w="100%" m="auto" {...props}>
       <InputLeftElement children={icon} ml="15px" />
       <Input
         id={id}

@@ -20,5 +20,12 @@ export default {
     '5xl': '3rem',
     '6xl': '4rem',
     mega: '100px'
+  },
+  fontWeights: {
+    ...theme.fontWeights,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700
   }
 };
